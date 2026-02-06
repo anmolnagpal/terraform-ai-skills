@@ -31,7 +31,7 @@ Paste any error messages or logs here
  - Provider: [e.g. AWS]
  - Provider Version: [e.g. 5.80.0]
  - GitHub Copilot Version: [e.g. 1.0.0]
- - Skills Version: [e.g. 2.0.0]
+ - Skills Version: [e.g. 0.0.1]
 
 **Configuration**
 Which provider config were you using?

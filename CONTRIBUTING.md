@@ -210,7 +210,7 @@ We recommend semantic versioning:
 # Tag releases
 git tag -a v1.0.0 -m "Initial release"
 git tag -a v1.1.0 -m "Added GCP support"
-git tag -a v2.0.0 -m "Breaking: Changed config format"
+git tag -a v0.0.1 -m "Breaking: Changed config format"
 ```
 
 ## Rollback Procedure

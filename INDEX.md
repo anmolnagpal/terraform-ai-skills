@@ -199,4 +199,4 @@ Use this to quickly find what you need:
 
 ---
 
-**Last Updated**: 2026-02-06 | **Version**: 2.0.0 | **Files**: 23
+**Last Updated**: 2026-02-06 | **Version**: 0.0.1 | **Files**: 23

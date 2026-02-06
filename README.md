@@ -191,7 +191,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed customization guide.
 
 ## 📈 Version & Changelog
 
-**Current:** v2.0.0 (2026-02-06)
+**Current:** v0.0.1 (2026-02-06)
 
 **Major Updates:**
 - ✨ Multi-cloud support (AWS, GCP, Azure, DigitalOcean)
@@ -270,7 +270,7 @@ Special thanks to the Terraform, GitHub Copilot, and open-source communities.
 
 <div align="center">
 
-**Status:** ✅ Production Ready | **Version:** 2.0.0 | **License:** MIT
+**Status:** ✅ Production Ready | **Version:** 0.0.1 | **License:** MIT
 
 **[⭐ Star this repo](https://github.com/anmolnagpal/terraform-ai-skills)** if it saves you time!
 

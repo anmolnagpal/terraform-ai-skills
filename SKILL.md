@@ -4,7 +4,7 @@ description: Multi-cloud Terraform module management skills for GitHub Copilot -
 license: MIT
 metadata:
   author: CloudDrove
-  version: 2.0.0
+  version: 0.0.1
   keywords:
     - terraform
     - github-copilot
@@ -301,7 +301,7 @@ If something goes wrong, see [SAFETY.md](SAFETY.md) for:
 
 ## Version Management
 
-### Current Version: 2.0.0
+### Current Version: 0.0.1
 
 **Release Date:** 2026-02-06
 **Status:** Production Ready ✅
@@ -464,4 +464,4 @@ Special thanks to the Terraform and GitHub Copilot communities.
 
 **Questions?** Check [INDEX.md](INDEX.md) for navigation or [open an issue](https://github.com/clouddrove/terraform-terraform-ai-skills/issues).
 
-**Status:** Production Ready ✅ | **Version:** 2.0.0 | **License:** MIT
+**Status:** Production Ready ✅ | **Version:** 0.0.1 | **License:** MIT

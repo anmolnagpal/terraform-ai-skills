@@ -1,6 +1,6 @@
 # Copilot Skills Version Information
 
-VERSION=2.0.0
+VERSION=0.0.1
 RELEASE_DATE=2026-02-06
 STATUS=stable
 
@@ -16,7 +16,7 @@ STATUS=stable
 
 ## Change Log
 
-### v2.0.0 (2026-02-06)
+### v0.0.1 (2026-02-06)
 - ✨ Added multi-cloud support (AWS, GCP, Azure, DO)
 - ⬆️ Updated Terraform requirement to 1.10.0
 - ⬆️ Updated all provider versions to latest
@@ -27,7 +27,7 @@ STATUS=stable
 - 📦 Separate config files per provider
 - 🎯 Enhanced validation with TFLint and TFSec
 
-### v1.0.0 (Previous)
+### Previous (Internal) (Previous)
 - Initial release for DigitalOcean
 - Basic provider upgrade
 - Workflow standardization
@@ -38,12 +38,12 @@ STATUS=stable
 
 | Skills Version | Terraform | Min Provider Versions |
 |----------------|-----------|----------------------|
-| 2.0.0 | 1.10.0+ | AWS 5.80, GCP 6.20, Azure 4.20, DO 2.70 |
+| 0.0.1 | 1.10.0+ | AWS 5.80, GCP 6.20, Azure 4.20, DO 2.70 |
 | 1.0.0 | 1.5.4+ | DO 2.70 |
 
 ## Upgrade Notes
 
-### From v1.0.0 to v2.0.0
+### From v1.0.0 to v0.0.1
 1. Update `global.config` is now base config only
 2. Use provider-specific configs: `aws.config`, `gcp.config`, `azure.config`, `digitalocean.config`
 3. Update prompts to reference specific provider configs

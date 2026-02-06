@@ -6,14 +6,11 @@ Format: [Keep a Changelog](https://keepachangelog.com/) | Versioning: [Semantic 
 
 ---
 
-## [2.0.0] - 2026-02-06
+## [0.0.1] - 2026-02-06
 
-### 🎉 Major Release - Multi-Cloud Support
+### 🎉 Initial Public Release
 
-**Breaking Changes:**
-- ⬆️ **Terraform minimum version: 1.5.4 → 1.10.0**
-- ⬆️ **Provider versions updated to latest (AWS 5.80, GCP 6.20, Azure 4.20, DO 2.70)**
-- 🔧 **Configuration structure changed** - Now provider-specific configs instead of single global config
+**First public release of Terraform AI Skills** - AI-powered multi-cloud infrastructure management toolkit.
 
 ### ✨ Added
 
@@ -35,7 +32,9 @@ Format: [Keep a Changelog](https://keepachangelog.com/) | Versioning: [Semantic 
 - 🔧 ENV-VARS.md - Environment variables reference
 - 📈 VERSION.md - Compatibility matrix
 
-**Infrastructure & Tooling:**
+**Core Infrastructure:**
+- ⚡ Terraform 1.10.0+ support with latest provider versions
+- 📝 4 AI-powered workflow prompts (upgrade, standardize, release, full-maintenance)
 - 🐚 run-with-provider.sh - Wrapper script for provider-specific operations
 - ✅ Enhanced validation: TFLint, TFSec, Trivy, Checkov integration
 - 🔒 Comprehensive safety procedures and rollback guides
@@ -97,7 +96,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/) | Versioning: [Semantic 
 
 ---
 
-## [1.0.0] - 2024-11
+## [Previous - Internal] - 2024-11
 
 ### ✨ Initial Release
 
@@ -124,57 +123,6 @@ Format: [Keep a Changelog](https://keepachangelog.com/) | Versioning: [Semantic 
 
 ---
 
-## Migration Guides
-
-### Upgrading from 1.0.0 to 2.0.0
-
-**Prerequisites:**
-```bash
-# Check Terraform version (must be 1.10.0+)
-terraform version
-
-# Update if needed
-brew upgrade terraform  # macOS
-# or download from https://www.terraform.io/downloads
-```
-
-**Step 1: Update Configuration References**
-
-```bash
-# Old (1.0.0) - Single config
-@copilot use config/global.config and upgrade provider
-
-# New (2.0.0) - Provider-specific
-@copilot use config/aws.config and upgrade provider
-@copilot use config/gcp.config and upgrade provider
-@copilot use config/azure.config and upgrade provider
-@copilot use config/digitalocean.config and upgrade provider
-```
-
-**Step 2: Update Script Calls**
-
-```bash
-# Old (1.0.0)
-./scripts/batch-provider-upgrade.sh
-
-# New (2.0.0) - Use wrapper
-./run-with-provider.sh aws batch-provider-upgrade.sh
-./run-with-provider.sh gcp batch-provider-upgrade.sh
-```
-
-**Step 3: Review New Documentation**
-
-1. Read [DISTRIBUTION.md](DISTRIBUTION.md) for distribution overview
-2. Check [PROVIDER-SELECTION.md](PROVIDER-SELECTION.md) for config selection
-3. Review updated [SAFETY.md](SAFETY.md) procedures
-
-**What Stays Compatible:**
-- ✅ Prompt workflow structure (still 4 main prompts)
-- ✅ Core script functionality
-- ✅ Safety-first approach
-- ✅ Validation philosophy
-
-**Benefits of Upgrading:**
 - 🎯 Multi-cloud support (AWS, GCP, Azure, DO)
 - ⚡ Latest Terraform 1.10.x features
 - 📚 2,656 lines of comprehensive documentation
@@ -189,7 +137,7 @@ brew upgrade terraform  # macOS
 | Version | Status | Terraform | Support Until | Notes |
 |---------|--------|-----------|---------------|-------|
 | 2.0.x | ✅ **Active** | 1.10.0+ | Current | Multi-cloud, full support |
-| 1.0.x | ⚠️ **Maintenance** | 1.5.4+ | 2026-06-06 | DigitalOcean only, critical fixes |
+| Internal | ⚠️ **Maintenance** | 1.5.4+ | 2026-06-06 | DigitalOcean only, critical fixes |
 | 0.x | ❌ **Unsupported** | Various | N/A | Upgrade required |
 
 **Support Levels:**
@@ -201,7 +149,7 @@ brew upgrade terraform  # macOS
 
 ## Roadmap
 
-### v2.1.0 - Enhanced Automation (Q2 2026)
+### v0.1.0 - Enhanced Automation (Q2 2026)
 
 **Planned Features:**
 - [ ] 🔍 Policy-as-code validation with OPA (Open Policy Agent)
@@ -213,7 +161,7 @@ brew upgrade terraform  # macOS
 
 **Estimated Timeline:** April-June 2026
 
-### v2.2.0 - Advanced Operations (Q3 2026)
+### v0.2.0 - Advanced Operations (Q3 2026)
 
 **Planned Features:**
 - [ ] 🔄 Drift detection skill for state management
@@ -225,7 +173,7 @@ brew upgrade terraform  # macOS
 
 **Estimated Timeline:** July-September 2026
 
-### v2.3.0 - Cloud Expansion (Q4 2026)
+### v0.3.0 - Cloud Expansion (Q4 2026)
 
 **Planned Features:**
 - [ ] 🌐 Alibaba Cloud support
@@ -237,7 +185,7 @@ brew upgrade terraform  # macOS
 
 **Estimated Timeline:** October-December 2026
 
-### v3.0.0 - Enterprise Edition (2027)
+### v1.0.0 - Stable Release (2027)
 
 **Planned Features:**
 - [ ] 🏢 Terraform Cloud/Enterprise integration
