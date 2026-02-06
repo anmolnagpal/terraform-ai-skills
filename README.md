@@ -11,43 +11,59 @@
 
 > **Transform 56 hours of Terraform module maintenance into 90 minutes with AI automation**
 
-AI-powered skills for GitHub Copilot, Claude, and ChatGPT that automate Terraform module management at scale. Manage 100+ modules across AWS, GCP, Azure, and DigitalOcean with 97% time savings and zero manual errors.
+AI-powered automation framework for GitHub Copilot, Claude, and ChatGPT that helps DevOps and Cloud Engineering teams manage Terraform modules at scale. Works with **any organization's modules** across AWS, GCP, Azure, and DigitalOcean with 97% time savings.
 
 ## 🎯 What This Does
 
-**Automate Terraform infrastructure management across 170+ modules in 4 clouds:**
+**Automate Terraform module maintenance for YOUR organization:**
 
 - 🤖 **AI-First Approach** - Works with GitHub Copilot, Claude, ChatGPT, and any LLM
 - 🔄 **Provider Upgrades** - Update AWS, GCP, Azure, DigitalOcean providers automatically
 - 🚀 **Release Automation** - Create semantic versioned releases with auto-generated changelogs
 - ✅ **Security Validation** - Built-in TFLint, TFSec, Trivy, Checkov scanning
-- 📊 **Real Results** - Save 97% maintenance time (56 hours → 90 minutes)
+- 📊 **Proven Results** - Save 97% maintenance time (tested with 100+ modules)
+- 🏢 **Universal** - Works with any organization, any module naming pattern
 
 ## ⚡ Quick Start
 
-### 1. Pick Your Cloud
+### 1. Configure for Your Organization
 
 ```bash
-# AWS modules (clouddrove/terraform-aws-*)
+# Clone the repository
+git clone https://github.com/anmolnagpal/terraform-ai-skills
+cd terraform-ai-skills
+
+# Edit configs for your organization
+vim config/aws.config  # Change ORG_NAME="your-org", REPO_PATTERN="terraform-aws-*"
+vim config/gcp.config  # Customize for GCP modules
+vim config/azure.config  # Customize for Azure modules
+```
+
+### 2. Pick Your Cloud Provider
+
+```bash
+# Examples - customize for YOUR organization:
+# AWS modules (your-org/terraform-aws-*)
 export PROVIDER_CONFIG="aws"
 
-# GCP modules (clouddrove/terraform-gcp-*)
+# GCP modules (your-org/terraform-gcp-*)
 export PROVIDER_CONFIG="gcp"
 
-# Azure modules (terraform-az-modules/*)  
+# Azure modules (your-org/terraform-azurerm-*)  
 export PROVIDER_CONFIG="azure"
 
-# DigitalOcean modules (terraform-do-modules/*)
+# DigitalOcean modules (your-org/terraform-digitalocean-*)
 export PROVIDER_CONFIG="digitalocean"
 ```
 
-### 2. Test First (Critical!)
+### 3. Test First (Critical!)
 
 ```bash
-@copilot use terraform-ai-skills/config/${PROVIDER_CONFIG}.config and upgrade provider in terraform-aws-vpc only
+# Test on ONE module from your organization
+@copilot use terraform-ai-skills/config/${PROVIDER_CONFIG}.config and upgrade provider in YOUR-MODULE-NAME only
 ```
 
-### 3. Run Full Automation
+### 4. Run Full Automation
 
 ```bash
 @copilot use terraform-ai-skills/config/${PROVIDER_CONFIG}.config and follow terraform-ai-skills/prompts/4-full-maintenance.prompt
@@ -104,14 +120,16 @@ export PROVIDER_CONFIG="digitalocean"
 
 ## ☁️ Multi-Cloud Support
 
-| Provider | Version | Terraform | Modules | Organization |
-|----------|---------|-----------|---------|--------------|
-| **AWS** | 5.80.0+ | 1.10.0+ | 170+ | [clouddrove](https://github.com/clouddrove) |
-| **GCP** | 6.20.0+ | 1.10.0+ | 50+ | [clouddrove](https://github.com/clouddrove) |
-| **Azure** | 4.20.0+ | 1.10.0+ | 40+ | [terraform-az-modules](https://github.com/terraform-az-modules) |
-| **DigitalOcean** | 2.70.0+ | 1.10.0+ | 30+ | [terraform-do-modules](https://github.com/terraform-do-modules) |
+Works with **any organization's Terraform modules**:
 
-**290+ total modules supported** across 4 cloud providers.
+| Provider | Version | Terraform | Your Modules | Example Pattern |
+|----------|---------|-----------|--------------|-----------------|
+| **AWS** | 5.80.0+ | 1.10.0+ | Your AWS modules | `your-org/terraform-aws-*` |
+| **GCP** | 6.20.0+ | 1.10.0+ | Your GCP modules | `your-org/terraform-gcp-*` |
+| **Azure** | 4.20.0+ | 1.10.0+ | Your Azure modules | `your-org/terraform-azurerm-*` |
+| **DigitalOcean** | 2.70.0+ | 1.10.0+ | Your DO modules | `your-org/terraform-digitalocean-*` |
+
+**Configure once, automate hundreds of modules** - Works with any naming pattern, any organization.
 
 ## 📖 Documentation
 
@@ -173,19 +191,46 @@ export PROVIDER_CONFIG="digitalocean"
 
 ## 🔧 Customization
 
-Fork this repo and customize for your organization:
+### For Your Organization
 
-```bash
-# 1. Clone
-git clone https://github.com/anmolnagpal/terraform-ai-skills
-cd terraform-ai-skills
+**This is a framework - customize it for your needs:**
 
-# 2. Update configs
-vim config/aws.config  # Change ORG_NAME, REPO_PATTERN, etc.
+1. **Configure Organization Settings**
+   ```bash
+   # Edit config files for your organization
+   vim config/aws.config
+   # Change: ORG_NAME="your-org"
+   # Change: REPO_PATTERN="terraform-aws-*"  # or your pattern
+   # Add: EXCLUDE_REPOS="modules-to-skip"
+   ```
 
-# 3. Test
-@copilot use config/aws.config and upgrade terraform-aws-test-repo
-```
+2. **Adjust Module Naming Patterns**
+   ```bash
+   # Examples of different patterns:
+   REPO_PATTERN="tf-aws-*"           # Different prefix
+   REPO_PATTERN="terraform-*-aws"    # Suffix pattern
+   REPO_PATTERN="infra-aws-*"        # Custom naming
+   ```
+
+3. **Configure Validation Rules**
+   ```bash
+   # Enable/disable tools in configs
+   RUN_TFLINT=true
+   RUN_TFSEC=true
+   RUN_TRIVY=false  # Disable if not using
+   ```
+
+4. **Test on Non-Production**
+   ```bash
+   # Always start with test repos
+   @copilot use config/aws.config and upgrade terraform-aws-test-module
+   ```
+
+**Examples of organizations using this:**
+- Open-source module maintainers (clouddrove, terraform-aws-modules, etc.)
+- Enterprise DevOps teams managing internal modules
+- Cloud consulting firms with client modules
+- Platform engineering teams with shared modules
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed customization guide.
 

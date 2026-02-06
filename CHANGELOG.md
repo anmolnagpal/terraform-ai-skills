@@ -15,10 +15,10 @@ Format: [Keep a Changelog](https://keepachangelog.com/) | Versioning: [Semantic 
 ### ✨ Added
 
 **Multi-Cloud Infrastructure:**
-- 🌩️ AWS support - 170+ modules (clouddrove/terraform-aws-*)
-- ☁️ GCP support - 50+ modules (clouddrove/terraform-gcp-*)
-- 🔷 Azure support - 40+ modules (terraform-az-modules/terraform-azurerm-*)
-- 🌊 DigitalOcean support - 30+ modules (terraform-do-modules/terraform-digitalocean-*)
+- 🌩️ AWS support - 170+ modules (your-org/terraform-aws-*)
+- ☁️ GCP support - 50+ modules (your-org/terraform-gcp-*)
+- 🔷 Azure support - 40+ modules (your-org/terraform-azurerm-*)
+- 🌊 DigitalOcean support - 30+ modules (your-org/terraform-digitalocean-*)
 
 **AI Assistant Integration:**
 - 🤖 SKILL.md with YAML frontmatter for AI discovery
