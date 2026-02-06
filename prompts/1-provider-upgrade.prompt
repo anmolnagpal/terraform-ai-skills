@@ -1,0 +1,65 @@
+# Prompt: Provider Upgrade
+
+Use this prompt to upgrade the Terraform provider across all modules.
+**Note:** Specify which provider config to use (aws.config, gcp.config, azure.config, or digitalocean.config)
+
+---
+
+## Copilot Prompt:
+
+```
+Please upgrade the Terraform provider across all modules in this repository:
+
+**Configuration:** Use terraform-ai-skills/config/${PROVIDER}.config 
+(Replace ${PROVIDER} with: aws, gcp, azure, or digitalocean)
+
+1. **Scan repositories**: Find all ${REPO_PATTERN} directories
+2. **Update versions.tf**: 
+   - Main module: Update provider to >= ${PROVIDER_MIN_VERSION}
+   - Update Terraform to >= ${TERRAFORM_MIN_VERSION}
+3. **Update examples**: Update all _examples/*/versions.tf or examples/*/versions.tf files
+4. **Validate**: Run terraform init and terraform validate on all modules and examples
+5. **Format**: Run terraform fmt -recursive
+6. **Commit changes**: Use emoji format "⬆️ upgrade: update ${PROVIDER_NAME} provider to ${PROVIDER_MIN_VERSION}"
+
+Configuration variables from selected config file.
+Exclude repositories: ${EXCLUDE_REPOS}
+```
+
+---
+
+## Usage Examples:
+
+### For AWS:
+```bash
+@copilot use terraform-ai-skills/config/aws.config and follow terraform-ai-skills/prompts/1-provider-upgrade.prompt
+```
+
+### For GCP:
+```bash
+@copilot use terraform-ai-skills/config/gcp.config and follow terraform-ai-skills/prompts/1-provider-upgrade.prompt
+```
+
+### For Azure:
+```bash
+@copilot use terraform-ai-skills/config/azure.config and follow terraform-ai-skills/prompts/1-provider-upgrade.prompt
+```
+
+### For DigitalOcean:
+```bash
+@copilot use terraform-ai-skills/config/digitalocean.config and follow terraform-ai-skills/prompts/1-provider-upgrade.prompt
+```
+
+---
+
+## Expected Outcome:
+- All modules updated to latest provider version
+- All examples validated and working
+- Clean commit history with emojis
+- No failing validations
+- Proper formatting applied
+
+## Time Estimate: 
+- Small repos (<20): 10-15 minutes
+- Large repos (50-100): 30-45 minutes
+- Extra large (170+ like AWS): 60-90 minutes

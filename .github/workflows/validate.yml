@@ -1,0 +1,44 @@
+name: Validate
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Validate Shell Scripts
+        run: |
+          for script in scripts/*.sh; do
+            echo "Checking $script..."
+            bash -n "$script"
+          done
+          
+      - name: Validate Config Files
+        run: |
+          for config in config/*.config; do
+            echo "Validating $config..."
+            # Check for required variables
+            grep -q "PROVIDER_NAME=" "$config" || exit 1
+            grep -q "TERRAFORM_MIN_VERSION=" "$config" || exit 1
+            grep -q "PROVIDER_MIN_VERSION=" "$config" || exit 1
+          done
+          
+      - name: Check File Consistency
+        run: |
+          # Ensure all markdown files exist
+          for file in README.md CONTRIBUTING.md SECURITY.md LICENSE; do
+            [ -f "$file" ] || { echo "Missing: $file"; exit 1; }
+          done
+          echo "✅ All required files present"
+          
+      - name: Run Tests
+        run: |
+          if [ -f "tests/test-configs.sh" ]; then
+            bash tests/test-configs.sh
+          fi

@@ -1,0 +1,21 @@
+# Code Owners
+# These users will be automatically requested for review when PRs are opened
+
+# Global owners
+* @anmolnagpal
+
+# Documentation
+*.md @anmolnagpal
+docs/ @anmolnagpal
+
+# Configuration files
+config/ @anmolnagpal
+
+# Scripts
+scripts/ @anmolnagpal
+
+# GitHub workflows
+.github/ @anmolnagpal
+
+# Prompts
+prompts/ @anmolnagpal

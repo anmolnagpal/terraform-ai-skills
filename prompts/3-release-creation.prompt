@@ -1,0 +1,45 @@
+# Prompt: Create Releases with Changelogs
+
+Use this prompt to create GitHub releases for all modules.
+
+---
+
+## Copilot Prompt:
+
+```
+Please create GitHub releases for all updated modules:
+
+1. **Check current versions**: Get latest tag from each repo
+2. **Calculate new versions**: Increment patch version (semantic versioning)
+3. **Update CHANGELOG.md**:
+   - Add new version entry with date
+   - Include emoji legend if not present
+   - List commits since last tag
+   - Use emoji format for commit messages
+4. **Create git tag**: ${TAG_PREFIX}X.Y.Z
+5. **Push changes**: Tag and updated CHANGELOG
+6. **Create GitHub release**:
+   - Title: "🚀 Release vX.Y.Z"
+   - Body: Include changes, key updates, full changelog link
+7. **Summary report**: List all releases created
+
+Configuration from: config/global.config
+
+Emoji guide:
+- ✨ New features
+- 🐛 Bug fixes
+- 📝 Documentation
+- ⬆️ Upgrades
+- 🔧 Configuration
+- 🔒 Security
+```
+
+---
+
+## Expected Outcome:
+- All modules have new releases
+- CHANGELOGs updated with emojis
+- GitHub releases with proper notes
+- Version tags pushed
+
+## Time Estimate: 10 minutes for 15 repos

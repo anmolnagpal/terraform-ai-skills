@@ -1,0 +1,32 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# Explicitly declare text files you want to always be normalized and converted
+# to native line endings on checkout
+*.md text
+*.txt text
+*.sh text
+*.config text
+*.prompt text
+
+# Denote binary files
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+
+# GitHub language detection
+*.md linguist-detectable
+*.sh linguist-detectable
+*.config linguist-language=Shell
+*.prompt linguist-language=Markdown
+
+# Export ignore
+.gitattributes export-ignore
+.gitignore export-ignore
+.editorconfig export-ignore
+.github/ export-ignore
+tests/ export-ignore
+examples/ export-ignore
+docs/ export-ignore

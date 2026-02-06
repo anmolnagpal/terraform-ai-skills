@@ -1,0 +1,119 @@
+# Prompt: Full Maintenance Cycle
+
+Use this prompt for complete module maintenance (combines all skills).
+**Note:** Specify which provider config to use before running this prompt.
+
+---
+
+## Copilot Prompt:
+
+```
+Please perform a complete maintenance cycle on all Terraform modules:
+
+**Configuration:** Use terraform-ai-skills/config/${PROVIDER}.config
+(Specify: aws, gcp, azure, or digitalocean)
+
+## Phase 1: Discovery & Audit
+1. List all repositories matching ${REPO_PATTERN}
+2. Check for open PRs (list and review status)
+3. Check current versions (Terraform, Provider, Module)
+4. Audit GitHub Actions status (identify failing workflows)
+5. List any excluded repos: ${EXCLUDE_REPOS}
+
+## Phase 2: Updates
+6. Upgrade provider to >= ${PROVIDER_MIN_VERSION}
+7. Update Terraform to >= ${TERRAFORM_MIN_VERSION}
+8. Update all examples with new versions (check both _examples/ and examples/ dirs)
+9. Fix module version references in examples
+10. Run terraform fmt -recursive on all modules
+
+## Phase 3: Workflows
+11. Standardize GitHub Actions workflows
+12. Fix workflow configurations to match actual examples
+13. Pin all workflows to SHA: ${WORKFLOW_SHA}
+14. Remove deprecated workflow files
+15. Update workflow permissions if needed
+
+## Phase 4: Validation
+16. Run terraform init on all modules
+17. Run terraform validate on all modules
+18. Run terraform validate on all examples
+19. Run tflint if available (${RUN_TFLINT})
+20. Run tfsec if available (${RUN_TFSEC})
+21. Ensure all GitHub Actions pass (wait for green checks)
+22. Check for any broken links or references
+
+## Phase 5: Documentation
+23. Update CHANGELOGs with emoji formatting (${USE_EMOJIS})
+24. Add version increment entries to CHANGELOG
+25. Update README badges if needed
+26. Verify LICENSE files are present
+
+## Phase 6: Releases
+27. Create releases for all updated modules
+28. Tag with semantic versioning (${SEMANTIC_VERSIONING})
+29. Use tag prefix: ${TAG_PREFIX}
+30. Generate release notes from CHANGELOG
+31. Push all changes to remote
+
+## Phase 7: Reporting
+32. Generate summary report with:
+    - Total repos processed
+    - Repos updated vs skipped
+    - New versions released
+    - Workflow status (passing/failing)
+    - Any issues found
+    - Time taken
+    - Next recommended actions
+
+Configuration variables from selected provider config.
+Default branch: ${DEFAULT_BRANCH}
+Create PRs instead of direct commits: ${CREATE_PR}
+```
+
+---
+
+## Usage Examples:
+
+### For AWS Modules (170+ repos):
+```bash
+@copilot use terraform-ai-skills/config/aws.config and follow terraform-ai-skills/prompts/4-full-maintenance.prompt
+```
+
+### For GCP Modules:
+```bash
+@copilot use terraform-ai-skills/config/gcp.config and follow terraform-ai-skills/prompts/4-full-maintenance.prompt
+```
+
+### For Azure Modules:
+```bash
+@copilot use terraform-ai-skills/config/azure.config and follow terraform-ai-skills/prompts/4-full-maintenance.prompt
+```
+
+### For DigitalOcean Modules:
+```bash
+@copilot use terraform-ai-skills/config/digitalocean.config and follow terraform-ai-skills/prompts/4-full-maintenance.prompt
+```
+
+---
+
+## Expected Outcome:
+- ✅ All modules fully up-to-date
+- ✅ All workflows passing (green checks)
+- ✅ All releases created with proper tags
+- ✅ Complete and standardized documentation
+- ✅ Comprehensive summary report
+- ✅ No manual intervention needed
+
+## Time Estimate: 
+- Small scale (<20 repos): 30-45 minutes
+- Medium scale (20-50 repos): 45-75 minutes
+- Large scale (50-100 repos): 90-120 minutes
+- Extra large (170+ repos like AWS): 2-3 hours
+
+## Safety Notes:
+1. **ALWAYS test on 1-2 repos first** before running on all repos
+2. Review the summary report before proceeding to releases
+3. Have rollback plan ready (see SAFETY.md)
+4. Monitor GitHub Actions during execution
+5. Stop immediately if unexpected errors occur

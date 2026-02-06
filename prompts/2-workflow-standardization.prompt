@@ -1,0 +1,40 @@
+# Prompt: GitHub Actions Workflow Standardization
+
+Use this prompt to standardize GitHub Actions workflows across all modules.
+
+---
+
+## Copilot Prompt:
+
+```
+Please standardize GitHub Actions workflows across all modules:
+
+1. **Audit workflows**: Check .github/workflows/ in each repo
+2. **Identify examples**: List actual _examples/ directories in each repo
+3. **Update tf-checks.yml**: 
+   - Configure jobs to match actual examples
+   - Remove jobs for non-existent examples
+   - Pin to SHA: ${WORKFLOW_SHA}
+4. **Standardize workflows**:
+   - automerge.yml
+   - checkov.yml
+   - pr_checks.yml
+   - stale_pr.yml
+   - tag-release.yml
+   - tf-checks.yml
+5. **Remove deprecated**: Delete old workflow files
+6. **Validate**: Ensure all workflows pass
+7. **Commit**: "🔧 fix: standardize GitHub Actions workflows"
+
+Configuration from: config/global.config
+```
+
+---
+
+## Expected Outcome:
+- All repos have consistent workflows
+- All workflows pinned to specific SHA
+- No failing GitHub Actions
+- Only test examples that exist
+
+## Time Estimate: 15-20 minutes for 15 repos
