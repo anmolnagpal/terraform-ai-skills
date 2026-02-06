@@ -139,7 +139,7 @@ Published advisories: [GitHub Security Advisories](https://github.com/anmolnagpa
 
 ## Questions?
 
-For security questions that are not vulnerability reports, please open a [GitHub Discussion](https://github.com/anmolnagpal/terraform-ai-skills/discussions) or email security@anmolnagpal.com.
+For security questions that are not vulnerability reports, please open a [GitHub Discussion](https://github.com/anmolnagpal/terraform-ai-skills/issues) or email security@anmolnagpal.com.
 
 ---
 
