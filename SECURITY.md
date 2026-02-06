@@ -135,11 +135,11 @@ We currently do not offer a bug bounty program, but we deeply appreciate securit
 
 ## Security Advisories
 
-Published advisories: [GitHub Security Advisories](https://github.com/clouddrove/terraform-terraform-ai-skills/security/advisories)
+Published advisories: [GitHub Security Advisories](https://github.com/anmolnagpal/terraform-ai-skills/security/advisories)
 
 ## Questions?
 
-For security questions that are not vulnerability reports, please open a [GitHub Discussion](https://github.com/clouddrove/terraform-terraform-ai-skills/discussions) or email security@anmolnagpal.com.
+For security questions that are not vulnerability reports, please open a [GitHub Discussion](https://github.com/anmolnagpal/terraform-ai-skills/discussions) or email security@anmolnagpal.com.
 
 ---
 

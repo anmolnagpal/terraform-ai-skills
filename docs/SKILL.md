@@ -387,8 +387,8 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for:
 
 ### Ways to Contribute
 
-1. **Report issues** - Found a bug? [Open an issue](https://github.com/clouddrove/terraform-terraform-ai-skills/issues)
-2. **Suggest features** - Have ideas? [Start a discussion](https://github.com/clouddrove/terraform-terraform-ai-skills/discussions)
+1. **Report issues** - Found a bug? [Open an issue](https://github.com/anmolnagpal/terraform-ai-skills/issues)
+2. **Suggest features** - Have ideas? [Start a discussion](https://github.com/anmolnagpal/terraform-ai-skills/discussions)
 3. **Add cloud providers** - Want to support another cloud? Submit a PR!
 4. **Improve documentation** - Found unclear docs? Help us improve!
 5. **Share use cases** - Used these skills successfully? Share your story!
@@ -430,8 +430,8 @@ Free to use, modify, and distribute. Attribution appreciated but not required.
 
 1. **Documentation** - Check [INDEX.md](docs/INDEX.md) for navigation
 2. **Examples** - Review [EXAMPLES.md](docs/EXAMPLES.md) for real-world cases
-3. **Issues** - [GitHub Issues](https://github.com/clouddrove/terraform-terraform-ai-skills/issues) for bugs
-4. **Discussions** - [GitHub Discussions](https://github.com/clouddrove/terraform-terraform-ai-skills/discussions) for questions
+3. **Issues** - [GitHub Issues](https://github.com/anmolnagpal/terraform-ai-skills/issues) for bugs
+4. **Discussions** - [GitHub Discussions](https://github.com/anmolnagpal/terraform-ai-skills/discussions) for questions
 5. **Safety** - Review [SAFETY.md](docs/SAFETY.md) for rollback help
 
 ### Community
@@ -462,6 +462,6 @@ Special thanks to the Terraform and GitHub Copilot communities.
 
 **Ready to save hundreds of hours per year?** Start with [DISTRIBUTION.md](docs/DISTRIBUTION.md) for the complete setup guide.
 
-**Questions?** Check [INDEX.md](docs/INDEX.md) for navigation or [open an issue](https://github.com/clouddrove/terraform-terraform-ai-skills/issues).
+**Questions?** Check [INDEX.md](docs/INDEX.md) for navigation or [open an issue](https://github.com/anmolnagpal/terraform-ai-skills/issues).
 
 **Status:** Production Ready ✅ | **Version:** 0.0.1 | **License:** MIT
