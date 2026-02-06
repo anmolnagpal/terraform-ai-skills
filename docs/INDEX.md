@@ -2,28 +2,28 @@
 
 ## 📋 Start Here
 
-1. **[DISTRIBUTION.md](DISTRIBUTION.md)** ⭐ - **Read this first!** Complete distribution package overview
+1. **[DISTRIBUTION.md](docs/DISTRIBUTION.md)** ⭐ - **Read this first!** Complete distribution package overview
 2. **[README.md](README.md)** - Main overview and quick start guide
-3. **[QUICKREF.md](QUICKREF.md)** - Quick reference card for daily use
+3. **[QUICKREF.md](docs/QUICKREF.md)** - Quick reference card for daily use
 
 ## 📖 Core Documentation
 
 ### Getting Started
 - **[README.md](README.md)** - Overview, features, and quick start (3 min read)
-- **[QUICKREF.md](QUICKREF.md)** - Quick reference for common commands (2 min read)
-- **[PROVIDER-SELECTION.md](PROVIDER-SELECTION.md)** - How to choose the right config (3 min read)
+- **[QUICKREF.md](docs/QUICKREF.md)** - Quick reference for common commands (2 min read)
+- **[PROVIDER-SELECTION.md](docs/PROVIDER-SELECTION.md)** - How to choose the right config (3 min read)
 
 ### Learning & Usage
-- **[USAGE.md](USAGE.md)** - Detailed usage guide with workflows (10 min read)
-- **[EXAMPLES.md](EXAMPLES.md)** - Real-world examples and use cases (8 min read)
-- **[ENV-VARS.md](ENV-VARS.md)** - Environment variables reference (5 min read)
+- **[USAGE.md](docs/USAGE.md)** - Detailed usage guide with workflows (10 min read)
+- **[EXAMPLES.md](docs/EXAMPLES.md)** - Real-world examples and use cases (8 min read)
+- **[ENV-VARS.md](docs/ENV-VARS.md)** - Environment variables reference (5 min read)
 
 ### Safety & Operations
-- **[SAFETY.md](SAFETY.md)** ⚠️ - **Read before production use!** Safety checklists and rollback (10 min read)
+- **[SAFETY.md](docs/SAFETY.md)** ⚠️ - **Read before production use!** Safety checklists and rollback (10 min read)
 
 ### Advanced
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** - Customization and extension guide (12 min read)
-- **[VERSION.md](VERSION.md)** - Version history and compatibility (3 min read)
+- **[VERSION.md](docs/VERSION.md)** - Version history and compatibility (3 min read)
 
 ## ⚙️ Configuration Files
 
@@ -98,34 +98,34 @@ Located in `scripts/`:
 ### I want to...
 
 **Get started quickly**
-→ Read [DISTRIBUTION.md](DISTRIBUTION.md) then [QUICKREF.md](QUICKREF.md)
+→ Read [DISTRIBUTION.md](docs/DISTRIBUTION.md) then [QUICKREF.md](docs/QUICKREF.md)
 
 **Understand what this does**
-→ Read [README.md](README.md) and [EXAMPLES.md](EXAMPLES.md)
+→ Read [README.md](README.md) and [EXAMPLES.md](docs/EXAMPLES.md)
 
 **Run my first maintenance**
-→ Read [SAFETY.md](SAFETY.md), then [USAGE.md](USAGE.md), then [QUICKREF.md](QUICKREF.md)
+→ Read [SAFETY.md](docs/SAFETY.md), then [USAGE.md](docs/USAGE.md), then [QUICKREF.md](docs/QUICKREF.md)
 
 **Choose the right config**
-→ Read [PROVIDER-SELECTION.md](PROVIDER-SELECTION.md)
+→ Read [PROVIDER-SELECTION.md](docs/PROVIDER-SELECTION.md)
 
 **Customize for my needs**
-→ Read [CONTRIBUTING.md](CONTRIBUTING.md) and [ENV-VARS.md](ENV-VARS.md)
+→ Read [CONTRIBUTING.md](CONTRIBUTING.md) and [ENV-VARS.md](docs/ENV-VARS.md)
 
 **Recover from an error**
-→ Read [SAFETY.md](SAFETY.md) section "Rollback Procedures"
+→ Read [SAFETY.md](docs/SAFETY.md) section "Rollback Procedures"
 
 **See real examples**
-→ Read [EXAMPLES.md](EXAMPLES.md)
+→ Read [EXAMPLES.md](docs/EXAMPLES.md)
 
 **Understand versioning**
-→ Read [VERSION.md](VERSION.md)
+→ Read [VERSION.md](docs/VERSION.md)
 
 **Learn all the commands**
-→ Read [USAGE.md](USAGE.md)
+→ Read [USAGE.md](docs/USAGE.md)
 
 **Get quick commands**
-→ Read [QUICKREF.md](QUICKREF.md)
+→ Read [QUICKREF.md](docs/QUICKREF.md)
 
 ## 📊 File Overview
 
@@ -149,20 +149,20 @@ Located in `scripts/`:
 ### Reading Order (Recommended)
 
 #### For First-Time Users (45 minutes total)
-1. [DISTRIBUTION.md](DISTRIBUTION.md) (10 min) - Overview
+1. [DISTRIBUTION.md](docs/DISTRIBUTION.md) (10 min) - Overview
 2. [README.md](README.md) (5 min) - Quick start
-3. [SAFETY.md](SAFETY.md) (10 min) - Safety procedures
-4. [PROVIDER-SELECTION.md](PROVIDER-SELECTION.md) (5 min) - Choose config
-5. [QUICKREF.md](QUICKREF.md) (5 min) - Commands
-6. [EXAMPLES.md](EXAMPLES.md) (10 min) - See real usage
+3. [SAFETY.md](docs/SAFETY.md) (10 min) - Safety procedures
+4. [PROVIDER-SELECTION.md](docs/PROVIDER-SELECTION.md) (5 min) - Choose config
+5. [QUICKREF.md](docs/QUICKREF.md) (5 min) - Commands
+6. [EXAMPLES.md](docs/EXAMPLES.md) (10 min) - See real usage
 
 #### For Advanced Users (Additional 30 minutes)
-7. [USAGE.md](USAGE.md) (10 min) - Detailed guide
+7. [USAGE.md](docs/USAGE.md) (10 min) - Detailed guide
 8. [CONTRIBUTING.md](CONTRIBUTING.md) (15 min) - Customization
-9. [ENV-VARS.md](ENV-VARS.md) (5 min) - Variables
+9. [ENV-VARS.md](docs/ENV-VARS.md) (5 min) - Variables
 
 #### For Reference (As Needed)
-10. [VERSION.md](VERSION.md) - When checking compatibility
+10. [VERSION.md](docs/VERSION.md) - When checking compatibility
 11. Config files - When updating versions
 12. Prompt files - When running operations
 13. Script files - When debugging

@@ -119,22 +119,22 @@ export PROVIDER_CONFIG="digitalocean"
 
 | Document | Purpose | Time |
 |----------|---------|------|
-| [QUICKREF.md](QUICKREF.md) | Command cheat sheet | 2 min |
-| [SAFETY.md](SAFETY.md) ⚠️ | Rollback procedures | 10 min |
-| [USAGE.md](USAGE.md) | Detailed workflows | 8 min |
+| [QUICKREF.md](docs/QUICKREF.md) | Command cheat sheet | 2 min |
+| [SAFETY.md](docs/SAFETY.md) ⚠️ | Rollback procedures | 10 min |
+| [USAGE.md](docs/USAGE.md) | Detailed workflows | 8 min |
 
 **Advanced Topics**:
 
-- [EXAMPLES.md](EXAMPLES.md) - Real-world use cases
-- [PROVIDER-SELECTION.md](PROVIDER-SELECTION.md) - Config selection guide
+- [EXAMPLES.md](docs/EXAMPLES.md) - Real-world use cases
+- [PROVIDER-SELECTION.md](docs/PROVIDER-SELECTION.md) - Config selection guide
 - [CONTRIBUTING.md](CONTRIBUTING.md) - Customization guide
-- [INDEX.md](INDEX.md) - Complete file navigation
+- [INDEX.md](docs/INDEX.md) - Complete file navigation
 
 ## 🛡️ Safety First
 
 ### Pre-Flight Checklist
 
-- ✅ Read [SAFETY.md](SAFETY.md) thoroughly
+- ✅ Read [SAFETY.md](docs/SAFETY.md) thoroughly
 - ✅ Test on 1 non-critical repo first
 - ✅ Review all changes with `git diff`
 - ✅ Have rollback plan documented
@@ -147,7 +147,7 @@ export PROVIDER_CONFIG="digitalocean"
 - **Checkpoints** - Create restore points before major changes
 - **Rollback** - Full recovery procedures documented
 
-**Emergency?** See [SAFETY.md](SAFETY.md) § Rollback Procedures
+**Emergency?** See [SAFETY.md](docs/SAFETY.md) § Rollback Procedures
 
 ## 💻 Requirements
 
@@ -200,7 +200,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed customization guide.
 - 🔒 Enhanced safety & rollback procedures
 - 🤖 Multi-AI assistant support (Copilot, Claude, ChatGPT)
 
-See [CHANGELOG.md](CHANGELOG.md) for complete version history and [VERSION.md](VERSION.md) for compatibility matrix.
+See [CHANGELOG.md](CHANGELOG.md) for complete version history and [VERSION.md](docs/VERSION.md) for compatibility matrix.
 
 ## 🤝 Contributing
 
@@ -230,12 +230,12 @@ Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md)
 ## 💬 Support
 
 **Get Help:**
-1. Check [INDEX.md](INDEX.md) for navigation
-2. Review [EXAMPLES.md](EXAMPLES.md) for common scenarios
+1. Check [INDEX.md](docs/INDEX.md) for navigation
+2. Review [EXAMPLES.md](docs/EXAMPLES.md) for common scenarios
 3. Search [Issues](https://github.com/anmolnagpal/terraform-ai-skills/issues)
 4. Ask in [Discussions](https://github.com/anmolnagpal/terraform-ai-skills/discussions)
 
-**Emergency?** See [SAFETY.md](SAFETY.md) for rollback procedures.
+**Emergency?** See [SAFETY.md](docs/SAFETY.md) for rollback procedures.
 
 ## 📄 License
 
@@ -260,7 +260,7 @@ Special thanks to the Terraform, GitHub Copilot, and open-source communities.
 
 **3 Steps to Success:**
 
-1. **Read Safety** → [SAFETY.md](SAFETY.md) (10 min)
+1. **Read Safety** → [SAFETY.md](docs/SAFETY.md) (10 min)
 2. **Test Small** → Run on 1 repo first
 3. **Scale Up** → Automate 100+ repos
 

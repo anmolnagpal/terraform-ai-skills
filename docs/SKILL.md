@@ -276,7 +276,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed customization guide.
 
 Before running bulk operations:
 
-- ✅ Read [SAFETY.md](SAFETY.md) completely
+- ✅ Read [SAFETY.md](docs/SAFETY.md) completely
 - ✅ Test on ONE repository first
 - ✅ Review changes with `git diff`
 - ✅ Verify excluded repos are actually excluded
@@ -293,7 +293,7 @@ Before running bulk operations:
 
 ### Rollback Procedures
 
-If something goes wrong, see [SAFETY.md](SAFETY.md) for:
+If something goes wrong, see [SAFETY.md](docs/SAFETY.md) for:
 - Reverting commits
 - Deleting releases
 - Handling partial failures
@@ -316,7 +316,7 @@ If something goes wrong, see [SAFETY.md](SAFETY.md) for:
 - 🎯 Provider selection guide
 - 📊 Version history tracking
 
-See [VERSION.md](VERSION.md) for complete changelog and compatibility matrix.
+See [VERSION.md](docs/VERSION.md) for complete changelog and compatibility matrix.
 
 ## Documentation
 
@@ -324,16 +324,16 @@ See [VERSION.md](VERSION.md) for complete changelog and compatibility matrix.
 
 | Document | Purpose | Time to Read |
 |----------|---------|--------------|
-| **[INDEX.md](INDEX.md)** | Complete navigation guide | 5 min |
-| **[DISTRIBUTION.md](DISTRIBUTION.md)** | Distribution overview | 10 min |
-| **[QUICKREF.md](QUICKREF.md)** | Quick reference card | 2 min |
-| **[SAFETY.md](SAFETY.md)** | Safety & rollback | 10 min ⚠️ |
-| **[USAGE.md](USAGE.md)** | Detailed guide | 15 min |
-| **[EXAMPLES.md](EXAMPLES.md)** | Real-world examples | 10 min |
-| **[PROVIDER-SELECTION.md](PROVIDER-SELECTION.md)** | Provider guide | 5 min |
+| **[INDEX.md](docs/INDEX.md)** | Complete navigation guide | 5 min |
+| **[DISTRIBUTION.md](docs/DISTRIBUTION.md)** | Distribution overview | 10 min |
+| **[QUICKREF.md](docs/QUICKREF.md)** | Quick reference card | 2 min |
+| **[SAFETY.md](docs/SAFETY.md)** | Safety & rollback | 10 min ⚠️ |
+| **[USAGE.md](docs/USAGE.md)** | Detailed guide | 15 min |
+| **[EXAMPLES.md](docs/EXAMPLES.md)** | Real-world examples | 10 min |
+| **[PROVIDER-SELECTION.md](docs/PROVIDER-SELECTION.md)** | Provider guide | 5 min |
 | **[CONTRIBUTING.md](CONTRIBUTING.md)** | Customization | 15 min |
-| **[ENV-VARS.md](ENV-VARS.md)** | Variables reference | 5 min |
-| **[VERSION.md](VERSION.md)** | Version history | 3 min |
+| **[ENV-VARS.md](docs/ENV-VARS.md)** | Variables reference | 5 min |
+| **[VERSION.md](docs/VERSION.md)** | Version history | 3 min |
 
 **Total onboarding time:** ~2 hours (including hands-on practice)
 
@@ -428,11 +428,11 @@ Free to use, modify, and distribute. Attribution appreciated but not required.
 
 ### Getting Help
 
-1. **Documentation** - Check [INDEX.md](INDEX.md) for navigation
-2. **Examples** - Review [EXAMPLES.md](EXAMPLES.md) for real-world cases
+1. **Documentation** - Check [INDEX.md](docs/INDEX.md) for navigation
+2. **Examples** - Review [EXAMPLES.md](docs/EXAMPLES.md) for real-world cases
 3. **Issues** - [GitHub Issues](https://github.com/clouddrove/terraform-terraform-ai-skills/issues) for bugs
 4. **Discussions** - [GitHub Discussions](https://github.com/clouddrove/terraform-terraform-ai-skills/discussions) for questions
-5. **Safety** - Review [SAFETY.md](SAFETY.md) for rollback help
+5. **Safety** - Review [SAFETY.md](docs/SAFETY.md) for rollback help
 
 ### Community
 
@@ -460,8 +460,8 @@ Special thanks to the Terraform and GitHub Copilot communities.
 
 ---
 
-**Ready to save hundreds of hours per year?** Start with [DISTRIBUTION.md](DISTRIBUTION.md) for the complete setup guide.
+**Ready to save hundreds of hours per year?** Start with [DISTRIBUTION.md](docs/DISTRIBUTION.md) for the complete setup guide.
 
-**Questions?** Check [INDEX.md](INDEX.md) for navigation or [open an issue](https://github.com/clouddrove/terraform-terraform-ai-skills/issues).
+**Questions?** Check [INDEX.md](docs/INDEX.md) for navigation or [open an issue](https://github.com/clouddrove/terraform-terraform-ai-skills/issues).
 
 **Status:** Production Ready ✅ | **Version:** 0.0.1 | **License:** MIT
