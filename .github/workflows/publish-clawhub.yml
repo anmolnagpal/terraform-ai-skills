@@ -19,4 +19,4 @@ jobs:
         run: npx clawhub login --token ${{ secrets.CLAWHUB_TOKEN }}
 
       - name: Publish to ClawHub
-        run: npx clawhub publish .
+        run: npx clawhub publish . --version "${GITHUB_REF_NAME#v}"
