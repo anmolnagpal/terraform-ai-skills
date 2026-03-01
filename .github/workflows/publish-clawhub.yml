@@ -15,7 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Login to ClawHub
+        run: npx clawhub login --token ${{ secrets.CLAWHUB_TOKEN }}
+
       - name: Publish to ClawHub
-        run: npx clawhub publish . --token $CLAWHUB_TOKEN
-        env:
-          CLAWHUB_TOKEN: ${{ secrets.CLAWHUB_TOKEN }}
+        run: npx clawhub publish .
