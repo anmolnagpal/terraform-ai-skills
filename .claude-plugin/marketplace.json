@@ -16,8 +16,7 @@
     "infrastructure-as-code",
     "devops",
     "automation",
-    "ci-cd",
-    "github-copilot"
+    "ci-cd"
   ],
   "skillFile": "SKILL.md",
   "install": {
