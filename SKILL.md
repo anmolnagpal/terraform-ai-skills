@@ -1,6 +1,6 @@
 ---
 name: terraform-ai-skills
-description: AI-powered multi-cloud Terraform module management — automate provider upgrades, workflow standardization, releases, and validation across AWS, GCP, Azure, and DigitalOcean at scale
+description: Use when bulk-managing Terraform modules at scale — upgrading providers across AWS, GCP, Azure, or DigitalOcean repositories, standardizing GitHub Actions workflows, automating semantic releases, running security scans, or performing end-to-end maintenance cycles across 10–200+ module repositories
 version: 0.0.1
 metadata:
   openclaw:
@@ -32,68 +32,67 @@ metadata:
       - ci-cd
       - github-copilot
     license: MIT
-    author: CloudDrove
+    author: Anmol Nagpal
 ---
 
 # Terraform AI Skills — Multi-Cloud Module Management
 
-AI-powered automation framework for managing Terraform modules at scale across AWS, GCP, Azure, and DigitalOcean. Automate provider upgrades, GitHub Actions workflows, releases, and validation across hundreds of repositories with 97% time savings.
+AI-powered automation for managing Terraform modules at scale across AWS, GCP, Azure, and DigitalOcean. Transforms 56 hours of manual maintenance into 90 minutes.
 
 ## When to Use
 
-**Activate these skills when:**
-- Managing 10–200+ Terraform module repositories
-- Upgrading provider versions across an organization
-- Standardizing GitHub Actions workflows
-- Creating versioned releases with automated changelogs
-- Performing bulk maintenance operations
-- Validating Terraform code at scale
+**Activate this skill when:**
+- Upgrading provider versions across 10–200+ module repositories
+- Standardizing GitHub Actions workflows across an organization
+- Creating semantic versioned releases with automated changelogs
+- Performing bulk validation (TFLint, TFSec, Trivy, Checkov)
+- Running a complete end-to-end maintenance cycle
 
-**Not ideal for:**
+**Don't use for:**
 - Single Terraform project maintenance
 - Writing individual Terraform configurations
-- Cloud-specific resource questions
+- Provider-specific API questions
 
 ## Available Skills
 
-### 1. Provider Upgrade 🔄
+### Full Maintenance ⚡ _(Recommended)_
+```
+@copilot use terraform-ai-skills/config/aws.config and follow terraform-ai-skills/prompts/4-full-maintenance.prompt
+```
+Discovery → Provider upgrades → Workflow fixes → Validation → Releases  
+**Time:** 45–180 min
+
+### Provider Upgrade 🔄
 ```
 @copilot use terraform-ai-skills/config/aws.config and follow terraform-ai-skills/prompts/1-provider-upgrade.prompt
 ```
-Updates provider version constraints, Terraform versions, examples, and runs validation.  
+Updates provider constraints, Terraform versions, examples, runs validation.  
 **Time:** 10–90 min
 
-### 2. Workflow Standardization 🔧
+### Workflow Standardization 🔧
 ```
 @copilot use terraform-ai-skills/config/gcp.config and follow terraform-ai-skills/prompts/2-workflow-standardization.prompt
 ```
-Pins GitHub Actions workflows to SHAs and removes deprecated actions.  
+Pins GitHub Actions to SHAs, removes deprecated actions.  
 **Time:** 15–30 min
 
-### 3. Release Creation 🚀
+### Release Creation 🚀
 ```
 @copilot use terraform-ai-skills/config/azure.config and follow terraform-ai-skills/prompts/3-release-creation.prompt
 ```
-Generates changelogs, creates semantic version tags, and publishes GitHub releases.  
+Generates changelogs, semantic version tags, GitHub releases.  
 **Time:** 10–20 min
-
-### 4. Full Maintenance ⚡ _(Recommended)_
-```
-@copilot use terraform-ai-skills/config/digitalocean.config and follow terraform-ai-skills/prompts/4-full-maintenance.prompt
-```
-Complete end-to-end cycle: discovery → upgrades → workflows → validation → releases.  
-**Time:** 45–180 min
 
 ## Quick Start
 
 ```bash
-# 1. Test on a single repo first (always!)
+# 1. Always test on ONE repo first
 @copilot use terraform-ai-skills/config/aws.config and upgrade provider in terraform-aws-vpc only
 
-# 2. Run full maintenance on all repos
+# 2. If successful, run full maintenance
 @copilot use terraform-ai-skills/config/aws.config and follow terraform-ai-skills/prompts/4-full-maintenance.prompt
 
-# 3. Verify results
+# 3. Verify
 git status && gh run list && gh release list
 ```
 
@@ -108,26 +107,28 @@ git status && gh run list && gh release list
 
 ## Proven Results
 
-| Operation            | Manual (170 repos) | With Skills | Savings |
-|----------------------|--------------------|-------------|---------|
-| Provider upgrade     | 56 hours           | 90 minutes  | 97% ⬇️  |
-| Workflow fixes       | 20 hours           | 30 minutes  | 97% ⬇️  |
-| Release creation     | 10 hours           | 15 minutes  | 97% ⬇️  |
-| Full maintenance     | 86 hours           | 2–3 hours   | 97% ⬇️  |
+| Operation        | Manual (170 repos) | With Skills | Savings |
+|------------------|--------------------|-------------|---------|
+| Provider upgrade | 56 hours           | 90 minutes  | 97% ⬇️  |
+| Workflow fixes   | 20 hours           | 30 minutes  | 97% ⬇️  |
+| Full maintenance | 86 hours           | 2–3 hours   | 97% ⬇️  |
 
 ## Requirements
 
-- **Terraform** 1.10.0+
-- **Git** 2.30+
-- **Bash** 4.0+
-- **GitHub Copilot CLI** or compatible AI assistant (Claude, ChatGPT, Cursor)
-- `gh` CLI _(optional — recommended for release automation)_
-- TFLint / TFSec / Trivy / Checkov _(optional — for enhanced validation)_
+- **Terraform** 1.10.0+ · **Git** 2.30+ · **Bash** 4.0+
+- **AI assistant:** GitHub Copilot CLI, Claude, ChatGPT, or Cursor
+- `gh` CLI _(optional — recommended for releases)_
+- TFLint / TFSec / Trivy / Checkov _(optional — enhanced validation)_
 
-## Safety
+## Detailed Reference Guides
 
-Always read [docs/SAFETY.md](docs/SAFETY.md) before running bulk operations. Built-in safeguards include exclude patterns, dry-run mode, validation checkpoints, and documented rollback procedures.
+For deeper guidance on specific topics:
+
+- **[Provider Configs](references/provider-configs.md)** — Per-cloud config options, customization, env vars
+- **[Safety & Rollback](references/safety.md)** — Pre-flight checklist, rollback procedures, emergency recovery
+- **[Real-World Examples](references/examples.md)** — Case studies across AWS, GCP, Azure, DigitalOcean
+- **[Quick Reference](references/quick-reference.md)** — Command cheat sheet, prompts guide, common patterns
 
 ## License
 
-MIT © 2026 CloudDrove
+MIT © 2026 Anmol Nagpal

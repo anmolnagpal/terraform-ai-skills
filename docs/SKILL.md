@@ -306,7 +306,7 @@ If something goes wrong, see [SAFETY.md](docs/SAFETY.md) for:
 **Release Date:** 2026-02-06
 **Status:** Production Ready ✅
 
-### What's New in 2.0
+### What's New in v0.0.1
 
 - ✨ Multi-cloud support (AWS, GCP, Azure, DigitalOcean)
 - ⬆️ Terraform 1.10.0+ requirement

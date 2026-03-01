@@ -1,0 +1,26 @@
+{
+  "name": "terraform-ai-skills",
+  "displayName": "Terraform AI Skills",
+  "description": "Use when bulk-managing Terraform modules at scale — upgrading providers across AWS/GCP/Azure/DigitalOcean, standardizing GitHub Actions workflows, automating semantic releases, or performing end-to-end maintenance cycles on 10–200+ module repositories",
+  "version": "0.0.1",
+  "author": "Anmol Nagpal",
+  "homepage": "https://github.com/anmolnagpal/terraform-ai-skills",
+  "license": "MIT",
+  "tags": [
+    "terraform",
+    "multi-cloud",
+    "aws",
+    "gcp",
+    "azure",
+    "digitalocean",
+    "infrastructure-as-code",
+    "devops",
+    "automation",
+    "ci-cd",
+    "github-copilot"
+  ],
+  "skillFile": "SKILL.md",
+  "install": {
+    "claude": "/plugin install terraform-ai-skills@anmolnagpal"
+  }
+}
