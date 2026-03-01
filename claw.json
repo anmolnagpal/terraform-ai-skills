@@ -1,6 +1,6 @@
 {
   "name": "terraform-ai-skills",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "AI-powered multi-cloud Terraform module management — automate provider upgrades, workflow standardization, releases, and validation across AWS, GCP, Azure, and DigitalOcean at scale",
   "author": "CloudDrove",
   "entry": "run-with-provider.sh",

@@ -6,6 +6,29 @@ Format: [Keep a Changelog](https://keepachangelog.com/) | Versioning: [Semantic 
 
 ---
 
+## [0.0.2] - 2026-03-01
+
+### Added
+- ClawHub publishing support (`SKILL.md`, `claw.json`)
+- GitHub Actions workflow for automated ClawHub publishing on version tags
+- `CLAUDE.md` — Claude Code skill integration guide
+- `.claude-plugin/marketplace.json` — Claude Code marketplace registration
+- `references/` folder with progressive disclosure pattern:
+  - `references/provider-configs.md` — per-provider config reference
+  - `references/safety.md` — pre-flight checklist and rollback procedures
+  - `references/examples.md` — real-world case studies
+  - `references/quick-reference.md` — command cheat sheet
+
+### Changed
+- `SKILL.md` description rewritten to trigger-based format for AI activation
+- README trimmed from 327 to ~80 lines for better scannability
+- Author standardized to `Anmol Nagpal` across all manifests
+
+### Fixed
+- Version label "What's New in 2.0" corrected to "What's New in v0.0.1" in `docs/SKILL.md`
+
+---
+
 ## [0.0.1] - 2026-02-06
 
 ### 🎉 Initial Public Release

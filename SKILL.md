@@ -1,7 +1,7 @@
 ---
 name: terraform-ai-skills
 description: Use when bulk-managing Terraform modules at scale — upgrading providers across AWS, GCP, Azure, or DigitalOcean repositories, standardizing GitHub Actions workflows, automating semantic releases, running security scans, or performing end-to-end maintenance cycles across 10–200+ module repositories
-version: 0.0.1
+version: 0.0.2
 metadata:
   openclaw:
     requires:
