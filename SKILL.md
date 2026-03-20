@@ -80,8 +80,15 @@ Pins GitHub Actions to SHAs, removes deprecated actions.
 ```
 @copilot use terraform-ai-skills/config/azure.config and follow terraform-ai-skills/prompts/3-release-creation.prompt
 ```
-Generates changelogs, semantic version tags, GitHub releases.  
+Generates changelogs, semantic version tags, GitHub releases.
 **Time:** 10–20 min
+
+### Repo Standardization 📋
+```
+@copilot use terraform-ai-skills/config/aws.config and follow terraform-ai-skills/prompts/5-repo-standardization.prompt
+```
+Adds SECURITY.md, CONTRIBUTING.md, .releaserc.json, updates pre-commit to industry standards.
+**Time:** 15–30 min
 
 ## Quick Start
 

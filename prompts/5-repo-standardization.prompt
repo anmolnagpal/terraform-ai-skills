@@ -1,0 +1,71 @@
+# Prompt: Repository Standardization
+
+Use this prompt to bring all modules up to industry standards (based on terraform-aws-modules).
+
+---
+
+## Copilot Prompt:
+
+```
+Please standardize all Terraform module repositories to match industry best practices:
+
+**Configuration:** Use terraform-ai-skills/config/${PROVIDER}.config
+**Reference:** See terraform-ai-skills/references/standards.md
+
+## Phase 1: Required Files
+1. Add SECURITY.md if missing (vulnerability reporting policy)
+2. Add CONTRIBUTING.md if missing (development guidelines, conventional commits)
+3. Add .releaserc.json if missing (semantic-release automation)
+4. Update .editorconfig to standard (2-space indent, UTF-8, LF)
+5. Update .pre-commit-config.yaml to antonbabenko/pre-commit-terraform v1.105.0
+
+## Phase 2: CI/CD Fixes
+6. Set provider: none in tf-checks.yml (skip cloud auth for validate-only)
+7. Pin shared workflow references to SHA (not @master)
+8. Ensure all required workflows exist (tf-checks, tflint, tfsec, pr_checks, automerge, stale, tag-release)
+
+## Phase 3: Version Fixes
+9. Fix required_version bugs (must be Terraform version like 1.10.0, NOT provider version)
+10. Standardize provider versions across org
+11. Sync README.yaml versions with versions.tf
+
+## Phase 4: Quality
+12. Ensure examples/basic/ and examples/complete/ exist
+13. Verify CHANGELOG.md is non-empty
+14. Verify LICENSE file exists (Apache 2.0)
+
+## Commit Format Rules (CRITICAL)
+- Use conventional commits: type: description
+- Allowed types: fix, feat, docs, ci, chore, test, refactor, style, perf, build, revert
+- NO emojis in commit messages or PR titles
+- NO AI attribution (no Co-Authored-By, no "Generated with")
+- PR title: "chore: standardize repo with security policy, pre-commit, and release automation"
+```
+
+---
+
+## Usage Examples:
+
+### For AWS:
+```bash
+@copilot use terraform-ai-skills/config/aws.config and follow terraform-ai-skills/prompts/5-repo-standardization.prompt
+```
+
+### For All Orgs:
+```bash
+# Run in parallel for each org
+@copilot standardize all clouddrove AWS, terraform-az-modules Azure, and terraform-do-modules DO repos
+```
+
+---
+
+## Expected Outcome:
+- All modules have SECURITY.md, CONTRIBUTING.md, .releaserc.json
+- Pre-commit hooks standardized to antonbabenko v1.105.0
+- CI/CD using provider: none for validate-only
+- Version constraints correct and consistent
+- Ready for automated semantic releases
+
+## Time Estimate:
+- Per org: 15-30 minutes
+- All 3 orgs in parallel: 30 minutes

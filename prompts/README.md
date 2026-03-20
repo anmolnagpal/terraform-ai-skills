@@ -92,6 +92,23 @@ use terraform-ai-skills/config/aws.config and follow terraform-ai-skills/prompts
 
 ---
 
+## 5. Repo Standardization
+
+Adds SECURITY.md, CONTRIBUTING.md, .releaserc.json, updates pre-commit and editorconfig.
+
+```
+use terraform-ai-skills/config/aws.config and follow terraform-ai-skills/prompts/5-repo-standardization.prompt
+```
+
+| Provider     | Command |
+|--------------|---------|
+| AWS          | `use config/aws.config + prompts/5-repo-standardization.prompt` |
+| GCP          | `use config/gcp.config + prompts/5-repo-standardization.prompt` |
+| Azure        | `use config/azure.config + prompts/5-repo-standardization.prompt` |
+| DigitalOcean | `use config/digitalocean.config + prompts/5-repo-standardization.prompt` |
+
+---
+
 ## Commit Format (CRITICAL)
 
 All CloudDrove repos enforce conventional commits via commitlint.
