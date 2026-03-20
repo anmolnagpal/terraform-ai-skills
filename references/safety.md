@@ -81,6 +81,38 @@ gh repo list YOUR-ORG --json name -q '.[].name' | grep terraform-aws- | while re
 done
 ```
 
+## Lessons Learned (Real-World Issues)
+
+### 1. required_version vs provider version
+The `required_version` (Terraform core) and `version` (provider) are different values.
+A greedy sed like `s/version = ">=.*"/version = ">= 5.80.0"/` will replace BOTH,
+setting `required_version = ">= 5.80.0"` when it should be `>= 1.10.0`.
+
+**Fix:** Use separate sed patterns or exclude `required_version` lines:
+```bash
+# Update required_version (Terraform)
+sed -i "s/required_version = \">=.*\"/required_version = \">= 1.10.0\"/" versions.tf
+
+# Update provider version (exclude required_version lines)
+sed -i '/required_version/!s/version = ">=.*"/version = ">= 5.80.0"/' versions.tf
+```
+
+### 2. Conventional commits are enforced
+CloudDrove repos use commitlint. Emojis in commit messages or PR titles will fail CI.
+
+**Allowed format:** `type: description`
+**Allowed types:** fix, feat, docs, ci, chore, test, refactor, style, perf, build, revert
+**Wrong:** `⬆️ upgrade: update provider` → commitlint fails
+**Right:** `chore: upgrade provider to >= 5.80.0` → commitlint passes
+
+### 3. tf-checks.yml defaults to azurerm
+The shared workflow `tf-checks.yml` defaults to `provider: azurerm` if not specified.
+For validate-only checks, always set `provider: none` to skip cloud auth.
+
+### 4. Some repos require 2 approving reviews
+Repos with stricter branch protection can't be admin-merged. Track these separately
+for manual review by team members.
+
 ## Safe Configuration Patterns
 
 ```bash

@@ -15,30 +15,28 @@ Please create GitHub releases for all updated modules:
    - Add new version entry with date
    - Include emoji legend if not present
    - List commits since last tag
-   - Use emoji format for commit messages
+   - Use conventional commit format in changelog entries
 4. **Create git tag**: ${TAG_PREFIX}X.Y.Z
 5. **Push changes**: Tag and updated CHANGELOG
 6. **Create GitHub release**:
-   - Title: "🚀 Release vX.Y.Z"
+   - Title: "Release vX.Y.Z"
    - Body: Include changes, key updates, full changelog link
 7. **Summary report**: List all releases created
 
 Configuration from: config/global.config
 
-Emoji guide:
-- ✨ New features
-- 🐛 Bug fixes
-- 📝 Documentation
-- ⬆️ Upgrades
-- 🔧 Configuration
-- 🔒 Security
+## Commit Format Rules (CRITICAL)
+- Use conventional commits: type: description
+- Allowed types: fix, feat, docs, ci, chore, test, refactor, style, perf, build, revert
+- NO emojis in commit messages or PR titles
+- Emojis are OK in CHANGELOG.md body and release notes, but NOT in commit messages
 ```
 
 ---
 
 ## Expected Outcome:
 - All modules have new releases
-- CHANGELOGs updated with emojis
+- CHANGELOGs updated
 - GitHub releases with proper notes
 - Version tags pushed
 

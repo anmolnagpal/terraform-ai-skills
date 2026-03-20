@@ -10,11 +10,12 @@ Use this prompt to standardize GitHub Actions workflows across all modules.
 Please standardize GitHub Actions workflows across all modules:
 
 1. **Audit workflows**: Check .github/workflows/ in each repo
-2. **Identify examples**: List actual _examples/ directories in each repo
-3. **Update tf-checks.yml**: 
+2. **Identify examples**: List actual _examples/ or examples/ directories in each repo
+3. **Update tf-checks.yml**:
    - Configure jobs to match actual examples
    - Remove jobs for non-existent examples
-   - Pin to SHA: ${WORKFLOW_SHA}
+   - Set provider: none for validate-only checks (no cloud auth needed)
+   - Pin to SHA: ${WORKFLOW_SHA} (if configured)
 4. **Standardize workflows**:
    - automerge.yml
    - checkov.yml
@@ -24,16 +25,39 @@ Please standardize GitHub Actions workflows across all modules:
    - tf-checks.yml
 5. **Remove deprecated**: Delete old workflow files
 6. **Validate**: Ensure all workflows pass
-7. **Commit**: "🔧 fix: standardize GitHub Actions workflows"
+7. **Commit**: "ci: standardize GitHub Actions workflows"
 
 Configuration from: config/global.config
+
+## Commit Format Rules (CRITICAL)
+- Use conventional commits: type: description
+- Allowed types: fix, feat, docs, ci, chore, test, refactor, style, perf, build, revert
+- NO emojis in commit messages or PR titles
 ```
+
+---
+
+## Key: provider: none
+
+When tf-checks.yml calls the shared workflow, always set `provider: none` unless the
+workflow needs actual cloud credentials (e.g., for terraform plan):
+
+```yaml
+jobs:
+  basic:
+    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@master
+    with:
+      working_directory: './examples/basic/'
+      provider: none
+```
+
+This skips all cloud auth steps (AWS, Azure, GCP, DO) and only runs validate/fmt/init.
 
 ---
 
 ## Expected Outcome:
 - All repos have consistent workflows
-- All workflows pinned to specific SHA
+- All workflows using provider: none for validate-only
 - No failing GitHub Actions
 - Only test examples that exist
 

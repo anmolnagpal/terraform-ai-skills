@@ -10,20 +10,32 @@ Use this prompt to upgrade the Terraform provider across all modules.
 ```
 Please upgrade the Terraform provider across all modules in this repository:
 
-**Configuration:** Use terraform-ai-skills/config/${PROVIDER}.config 
+**Configuration:** Use terraform-ai-skills/config/${PROVIDER}.config
 (Replace ${PROVIDER} with: aws, gcp, azure, or digitalocean)
 
 1. **Scan repositories**: Find all ${REPO_PATTERN} directories
-2. **Update versions.tf**: 
-   - Main module: Update provider to >= ${PROVIDER_MIN_VERSION}
-   - Update Terraform to >= ${TERRAFORM_MIN_VERSION}
-3. **Update examples**: Update all _examples/*/versions.tf or examples/*/versions.tf files
-4. **Validate**: Run terraform init and terraform validate on all modules and examples
-5. **Format**: Run terraform fmt -recursive
-6. **Commit changes**: Use emoji format "⬆️ upgrade: update ${PROVIDER_NAME} provider to ${PROVIDER_MIN_VERSION}"
+2. **Update versions.tf** (IMPORTANT: handle each line separately):
+   - Update `required_version` to >= ${TERRAFORM_MIN_VERSION} (this is the TERRAFORM version)
+   - Update provider `version` to >= ${PROVIDER_MIN_VERSION} (this is the PROVIDER version)
+   - WARNING: Do NOT mix these up — required_version is Terraform, version under required_providers is the provider
+3. **Update examples**: Update all _examples/*/versions.tf or examples/*/versions.tf files (same rules)
+4. **Update tf-checks workflow**: Set `provider: none` in .github/workflows/tf-checks.yml (skip cloud auth for validate-only)
+5. **Validate**: Run terraform init and terraform validate on all modules and examples
+6. **Format**: Run terraform fmt -recursive
+7. **Commit changes**: Use conventional commit format "chore: upgrade ${PROVIDER_NAME} provider to >= ${PROVIDER_MIN_VERSION}"
+8. **PR title**: Use conventional commit format "chore: upgrade ${PROVIDER_NAME} provider to >= ${PROVIDER_MIN_VERSION} and Terraform to >= ${TERRAFORM_MIN_VERSION}"
 
 Configuration variables from selected config file.
 Exclude repositories: ${EXCLUDE_REPOS}
+
+## Commit Format Rules (CRITICAL)
+- Use conventional commits: type: description
+- Allowed types: fix, feat, docs, ci, chore, test, refactor, style, perf, build, revert
+- NO emojis in commit messages or PR titles
+- Examples:
+  - "chore: upgrade AWS provider to >= 5.80.0"
+  - "ci: set provider: none in tf-checks workflow"
+  - "fix: correct required_version in versions.tf"
 ```
 
 ---
@@ -55,11 +67,18 @@ Exclude repositories: ${EXCLUDE_REPOS}
 ## Expected Outcome:
 - All modules updated to latest provider version
 - All examples validated and working
-- Clean commit history with emojis
+- Clean commit history with conventional commits
 - No failing validations
 - Proper formatting applied
+- tf-checks workflow using provider: none (no cloud auth needed)
 
-## Time Estimate: 
+## Common Pitfalls:
+- Do NOT use a single sed pattern for both required_version and provider version — they have different values
+- Do NOT use emojis in commit messages — repos enforce commitlint
+- Do NOT forget to update tf-checks.yml to use provider: none
+- Some repos require 2 approving reviews — document these for manual merge
+
+## Time Estimate:
 - Small repos (<20): 10-15 minutes
 - Large repos (50-100): 30-45 minutes
 - Extra large (170+ like AWS): 60-90 minutes
